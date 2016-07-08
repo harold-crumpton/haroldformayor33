@@ -53,19 +53,29 @@
 <div class="container">
   <h2>CONTACT INFORMATION: input</h2>
   <p>PLEASE ENTER THE INFORMATION REQUESTED BELOW:</p>
-  <form role="form">
-    <div class="form-group">
-      <label for="usr">Name:  ADDRESS: CITY/STATE/ZIP:</label>
-      <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="pwd">E-MAIL:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
-    <a href="mayor.html"><button type="button" class="btn btn-danger">Enter Now</button></a>
-  </form>
-</div>
+ 
+ <form action="https://harold-crumpton.github.io/haroldformayor33/mayor.html" method="get" onsubmit="return check_info();">
+<ul>
+  <li>Usename: <input type="text" name="username" id="username"/></li>
+<li>Password: <input type="password" name="password" id="password"/></li>
 
+<li><input type="submit" value="Enter Now!"/></li>
+</ul>
+</form>
+</div>
+<script type="text/javascript">
+    function check_info(){
+       var username = document.getElementById('username').value;
+       var password = document.getElementById('password').value;
+        if (username=="" || password=="") {
+        alert ('Please fill in all fields');
+        return false;
+       }
+       else{
+        return true;
+       }
+    }
+</script>
 
 
 </body>
